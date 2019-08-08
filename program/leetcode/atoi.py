@@ -1,5 +1,5 @@
 class Solution:
-    def myAtoi(self, str: str) -> int:
+    def myAtoi(self, str):
         
         new_str = str.strip()
         if len(new_str)<=0:
