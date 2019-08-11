@@ -7,7 +7,8 @@
     @Author  :   R.
     @Version :   1.0
     @Contact :   827710637@qq.com
-    @Desc    :   采用了中心扩散的方法，还可以采用Manacher算法（Python未实现）
+    @Desc    :   采用了中心扩散的方法，还可以采用Manacher算法（Python未实现
+                 也可以采用动态规划
 '''
 
 '''
