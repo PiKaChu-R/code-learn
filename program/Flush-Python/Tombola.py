@@ -90,4 +90,22 @@ class TomboList(list):
 ['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__module__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'inspect', 'load', 'loaded', 'pick', 'pop', 'remove', 'reverse', 'sort']
 >>> TomboList.__mro__
 (<class '__main__.TomboList'>, <class 'list'>, <class 'object'>)
->>> 
+>>> class AddableBingoCage(bingoCage):
+        def __add__(self,other):
+                if isinstance(other,Tombola):
+                        return AddableBingoCage(self.inspect()+other.inspect())
+                else:
+                        return NotImplemented
+        def __iadd__(self,other):
+                if isinstance(other,Tombola):
+                        other_iterable = other.inspect()
+                else:
+                        try:
+                                other_iterable = iter(other)
+                        except TypeError:
+                                self_cls = type(self).__name__
+                                msg = 'right operand in += must be {!r} or an iterable'
+                                raise TypeError(msg.format(self_cls))
+                self.load(other_iterable)
+                return self
+
