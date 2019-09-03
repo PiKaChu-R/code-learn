@@ -43,7 +43,7 @@ def minHP1(m):
     # print(dp)
     return dp[0][0]
 
-
+# 时间复杂度没变，空间复杂度减小O(min{M,N})
 def minHP2(m):
 
     if m == None or m[0] == None or len(m[0]) == 0 or len(m) == 0:
