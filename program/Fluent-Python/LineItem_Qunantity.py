@@ -42,6 +42,6 @@ class LineItem:
     def subtotal(self):
         return self.weight * self.price
 
-b = LineItem('b',1,2)
-print(b.price)
-print(LineItem.price)
+# b = LineItem('b',1,2)
+# print(b.price)
+# print(LineItem.price)
