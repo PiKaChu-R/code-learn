@@ -34,7 +34,8 @@ def solution2(nums):
     # 去掉重复组合—nums中含有重复数字
     if not nums:
         return []
-    nums.sort()
+    # nums.sort()
+    nums = sorted(nums)
     n = len(nums)
     visited = [0] * n
     res = []
@@ -52,8 +53,8 @@ def solution2(nums):
 
 # print(solution([1,5,2,5,4]))
 # print('-'*8)
-# print(solution2([1,5,2,5,4]))
-if len(solution([1,5,2,5,4])) == len(solution2([1,5,2,5,4])):
-    print('-')
-else:
-    print('+')
+print(solution2('abc'))
+# if len(solution([1,5,2,5,4])) == len(solution2([1,5,2,5,4])):
+#     print('-')
+# else:
+#     print('+')
