@@ -53,7 +53,7 @@ def solution2(nums):
 
 # print(solution([1,5,2,5,4]))
 # print('-'*8)
-print(solution2('abc'))
+print(solution2('abcc'))
 # if len(solution([1,5,2,5,4])) == len(solution2([1,5,2,5,4])):
 #     print('-')
 # else:
